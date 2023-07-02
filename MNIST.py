@@ -12,7 +12,7 @@ test_img = test_img/255.0
 train_label = keras.utils.to_categorical(train_label)
 test_label = keras.utils.to_categorical(test_label)
 
-# определите архитектуру модели
+# определяю архитектуру модели
 model = keras.Sequential([
     keras.layers.Conv2D(32, (5, 5), padding="same", input_shape=[28, 28, 1]),
     keras.layers.MaxPool2D((2,2)),
@@ -25,7 +25,7 @@ model = keras.Sequential([
 ])
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-# обучаем модель
+# обучаю модель
 model.fit(train_img,train_label, validation_data=(test_img,test_label), epochs=10)
 test_loss,test_acc = model.evaluate(test_img, test_label)
 print('Test accuracy:', test_acc)

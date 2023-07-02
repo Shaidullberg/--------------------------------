@@ -307,10 +307,10 @@ function displayLabel(data) {
     }
   }
   $(".prediction-text").html(
-    "Predicting you draw <b>" +
+    "Предсказываю, что ты нарисовал <b>" +
       maxIndex +
-      "</b> with <b>" +
+      "</b> с <b>" +
       Math.trunc(max * 100) +
-      "%</b> confidence"
+      "%</b> вероятностью"
   );
 }
